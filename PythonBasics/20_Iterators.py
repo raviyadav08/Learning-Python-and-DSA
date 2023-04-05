@@ -1,3 +1,8 @@
+"""
+Create an iterator for fibonacci series in such a way that each next returns the next element from fibonacci series.
+The iterator should stop when it reaches a limit defined in the constructor.
+"""
+
 class Fibonnaci():
     def __init__(self,limit):
         self.f1 = 0

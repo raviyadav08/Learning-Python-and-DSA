@@ -1,0 +1,36 @@
+"""
+Create a custom exception AdultException.
+
+Create a class Person with attributes name and age in it.
+
+Create a function get_minor_age() in the class. It throws an exception if the person is adult otherwise returns age.
+
+Create a function display_person() which prints the age and name of a person.
+"""
+
+class AdultException(Exception):
+    pass
+
+class Person:
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+
+    def get_minor_age(self):
+        if self.age > 18:
+            raise AdultException
+        else:
+            return self.age
+
+    def display(self):
+        try:
+            print(f"Age : {self.get_minor_age()}")
+        except AdultException:
+            print("Person is an adult")
+        finally:
+            print(f"Name : {self.name}\n")
+        
+
+
+Person("Ravi", 17).display()
+Person("Sunny",21).display()
